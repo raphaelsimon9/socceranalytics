@@ -128,6 +128,7 @@ export function FootballCard({ m, league }) {
       <header className="cardhead">
         <div>
           <div className="muted small">{when(m.kickoff)}</div>
+          <div className="league-label">{m.league_name || m.league_key || "League unavailable"}</div>
           <h3>{m.home} <span className="vs">vs</span> {m.away}</h3>
         </div>
         <span className={`basis basis-${m.basis}`}>{m.basis === "blend" ? "Model + market" : m.basis === "model" ? "Model" : m.basis === "market" ? "Market-derived" : "No data"}</span>
@@ -182,6 +183,7 @@ export function BasketballCard({ m }) {
       <header className="cardhead">
         <div>
           <div className="muted small">{when(m.kickoff)}</div>
+          <div className="league-label">{m.league_name || m.league_key || "League unavailable"}</div>
           <h3>{m.away} <span className="vs">@</span> {m.home}</h3>
         </div>
         <span className="basis basis-market">Market-derived</span>

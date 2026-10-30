@@ -86,3 +86,17 @@ table { width: 100%; border-collapse: collapse; }
 .range-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .range-inputs label { display: grid; gap: 3px; font-size: 11px; color: var(--muted); }
 .range-inputs input { width: 100%; accent-color: var(--accent); }
+
+/* Competition label shown on every football and basketball fixture card. */
+.league-label {
+  display: inline-block;
+  width: fit-content;
+  margin: 4px 0 6px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--soft, #eef3ff);
+  color: var(--muted, #53627a);
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.4;
+}

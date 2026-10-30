@@ -6,5 +6,5 @@ __pycache__
 .pytest_cache
 edgelab.db
 socceranalytics-workspace.code-workspace
-.gitignore
 .npmrc
+.gitignore

@@ -79,6 +79,12 @@ async def matches(
             return await build_one(lg)
     results = await asyncio.gather(*(bounded(lg) for lg in selected))
 
+    # Attach competition metadata to every fixture, including single-league loads.
+    for item in results:
+        for match in item["matches"]:
+            match.setdefault("league_key", item["league"])
+            match.setdefault("league_name", item["name"])
+
     if league != "all":
         data = results[0]
         if data["mode"] == "error":
